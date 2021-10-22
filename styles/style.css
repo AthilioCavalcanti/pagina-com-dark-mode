@@ -3,7 +3,7 @@
 :root{
     --cor1: #989fa7;
     --cor2: #565655;
-    --cor3: rgb(26, 25, 25);
+    --cor3: #1a1919;
 }
 
 *{
@@ -37,6 +37,27 @@ body{
     text-decoration: none;
     font-size: 1.2rem;
     font-weight: 600;
+    display: flex;
+    align-items: center;
+}
+
+.btn::before{
+    content: url(../images/icon-moon.png);
+    margin-top: 6px;
+    margin-right: 10px;
+}
+
+.btn::after{
+    content: "Ativar Dark Mode";
+}
+
+.btn.dark::before{
+    content: url(../images/icon-sun.png);
+    
+}
+
+.btn.dark::after{
+    content: "Ativar Light Mode";
 }
 
 .container .btn.dark{
